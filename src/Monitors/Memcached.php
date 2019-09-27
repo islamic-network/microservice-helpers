@@ -5,10 +5,10 @@ namespace IslamicNetwork\MicroServiceHelpers\Monitors;
 use Vesica\Cacher\Memcached as Cache;
 use Exception;
 
-class Memcached
+class Memcached extends Monitor
 {
     private $cache;
-    public $status;
+    protected $status;
 
     public function __construct(string $host, int $port)
     {

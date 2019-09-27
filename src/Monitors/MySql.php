@@ -6,10 +6,10 @@ namespace IslamicNetwork\MicroServiceHelpers\Monitors;
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\DriverManager;
 
-class MySql
+class MySql extends Monitor
 {
     private $db;
-    private $status;
+    protected $status;
 
     public function __construct(string $host, int $port, string $username, string $password, string $database, string $sql = null, string $charset = 'utf8mb4')
     {

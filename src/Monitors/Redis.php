@@ -5,10 +5,10 @@ namespace IslamicNetwork\MicroServiceHelpers\Monitors;
 use Vesica\Cacher\Redis as Cache;
 use Exception;
 
-class Redis
+class Redis extends Monitor
 {
     private $cache;
-    public $status;
+    protected $status;
 
     public function __construct(string $host, int $port)
     {
