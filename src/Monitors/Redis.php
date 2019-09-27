@@ -3,7 +3,7 @@
 
 namespace IslamicNetwork\MicroServiceHelpers\Monitors;
 use Vesica\Cacher\Redis as Cache;
-
+use Exception;
 
 class Redis
 {
@@ -12,8 +12,12 @@ class Redis
 
     public function __construct(string $host, int $port)
     {
-        $this->cache = new Cache($host, $port, 'IslamicNetworkMonitor');
-        $this->status = $this->cache->set('status', 'redis');
+        try {
+            $this->cache = new Cache($host, $port, 'IslamicNetworkMonitor');
+            $this->status = $this->cache->set('status', 'redis');
+        } catch (Exception $e) {
+            $this->status = false;
+        }
     }
 
 }
