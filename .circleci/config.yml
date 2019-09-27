@@ -18,14 +18,7 @@ jobs:
     executor: php73
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v4-dependencies-{{ checksum "composer.json" }}
-      - run: composer install -n --prefer-dist
-      - save_cache:
-          paths:
-            - ./vendor
-          key: v4-dependencies-{{ checksum "composer.json" }}
+      - run: composer install
       - run: vendor/bin/phpunit --debug
 
 workflows:
