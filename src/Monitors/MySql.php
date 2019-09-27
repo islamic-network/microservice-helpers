@@ -5,11 +5,11 @@ namespace IslamicNetwork\MicroServiceHelpers\Monitors;
 
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\DriverManager;
+use Exception;
 
 class MySql extends Monitor
 {
     private $db;
-    protected $status;
 
     public function __construct(string $host, int $port, string $username, string $password, string $database, string $sql = null, string $charset = 'utf8mb4')
     {
@@ -22,9 +22,13 @@ class MySql extends Monitor
             'driver' => 'pdo_mysql',
         ];
 
-        $this->db = DriverManager::getConnection($connectionParams, new Configuration());
+        try {
+            $this->db = DriverManager::getConnection($connectionParams, new Configuration());
 
-        $this->status = $this->db->exec($sql);
+            $this->status = $this->db->exec($sql);
+        } catch (Exception $e) {
+            $this->status = false;
+        }
 
 
 

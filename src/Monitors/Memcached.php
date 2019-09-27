@@ -8,7 +8,6 @@ use Exception;
 class Memcached extends Monitor
 {
     private $cache;
-    protected $status;
 
     public function __construct(string $host, int $port)
     {

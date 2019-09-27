@@ -9,7 +9,7 @@ namespace IslamicNetwork\MicroServiceHelpers\Monitors;
  */
 class Monitor
 {
-    protected $status;
+    public $status;
 
     public function status()
     {
