@@ -25,7 +25,7 @@ class MySql extends Monitor
         try {
             $this->db = DriverManager::getConnection($connectionParams, new Configuration());
 
-            $this->status = is_array($this->db->fetchAssoc($sql)) ? true : false;
+            $this->status = is_array($this->db->fetchAssoc($sql));
         } catch (Exception $e) {
             $this->status = false;
         }
