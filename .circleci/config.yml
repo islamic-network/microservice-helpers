@@ -5,7 +5,11 @@ executors:
       - image: vesica/php73
       - image: memcached:1.5
       - image: redis:5
-      - image: percona:5.7
+      - image: islamicnetwork/api.alquran.cloud-db
+        environment:
+          - MYSQL_USER: circleci
+          - MYSQL_PASSWORD: circleci
+          - MYSQL_DATABASE: circleci
     working_directory: ~/repo
 
 jobs:
@@ -23,7 +27,7 @@ jobs:
           paths:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
-      - run: vendor/bin/phpunit
+      - run: vendor/bin/phpunit --debug
 
 workflows:
   version: 2
