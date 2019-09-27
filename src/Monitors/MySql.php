@@ -11,7 +11,7 @@ class MySql extends Monitor
 {
     private $db;
 
-    public function __construct(string $host, int $port, string $username, string $password, string $database, string $sql = null, string $charset = 'utf8mb4')
+    public function __construct(string $host, int $port, string $username, string $password, string $database, string $sql, string $charset = 'utf8mb4')
     {
         $connectionParams = [
             'dbname' => $database,
