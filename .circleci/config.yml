@@ -5,10 +5,11 @@ executors:
       - image: vesica/php73
       - image: memcached:1.5
       - image: redis:5
-      - image: islamicnetwork/api.alquran.cloud-db
+      - image: percona:5.7
         environment:
           - MYSQL_USER: circleci
           - MYSQL_PASSWORD: circleci
+          - MYSQL_ROOT_PASSWORD: circleci
           - MYSQL_DATABASE: circleci
     working_directory: ~/repo
 
