@@ -25,7 +25,7 @@ class MySql extends Monitor
         try {
             $this->db = DriverManager::getConnection($connectionParams, new Configuration());
 
-            $this->status = $this->db->exec($sql);
+            $this->status = $this->db->executeQuery($sql);
         } catch (Exception $e) {
             $this->status = false;
         }
