@@ -755,16 +755,16 @@
         },
         {
             "name": "vesica/cacher",
-            "version": "1.2",
+            "version": "1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vesica/cacher.git",
-                "reference": "5848c62c962bd1d0e1c404484be5c80fae080f92"
+                "reference": "bcb8d2b098a2884d3e1884ba98d7b9b2ae7ed7ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vesica/cacher/zipball/5848c62c962bd1d0e1c404484be5c80fae080f92",
-                "reference": "5848c62c962bd1d0e1c404484be5c80fae080f92",
+                "url": "https://api.github.com/repos/vesica/cacher/zipball/bcb8d2b098a2884d3e1884ba98d7b9b2ae7ed7ce",
+                "reference": "bcb8d2b098a2884d3e1884ba98d7b9b2ae7ed7ce",
                 "shasum": ""
             },
             "require": {
@@ -784,7 +784,7 @@
                 "GPL-3.0-or-later"
             ],
             "description": "A simplified caching library built on top of php-cache",
-            "time": "2019-06-24T10:31:17+00:00"
+            "time": "2019-09-27T10:38:55+00:00"
         }
     ],
     "packages-dev": [
