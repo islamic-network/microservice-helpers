@@ -1,0 +1,27 @@
+{
+  "name": "islamic-network/microservice-helpers",
+  "type": "library",
+  "description": "PHP Package to make microservices consistent",
+  "authors": [
+    {
+      "name": "Meezaan-ud-Din Abdu Dhil-Jalali Wal-Ikram",
+      "email": "website@meezaan.net"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/islamic-network/microservice-helpers"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "IslamicNetwork\\MicroServiceHelpers\\": "src"
+    }
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.0"
+  }
+}
