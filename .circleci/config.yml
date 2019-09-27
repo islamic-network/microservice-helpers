@@ -1,0 +1,43 @@
+version: 2.1
+executors:
+  php73:
+    docker:
+      - image: vesica/php73
+      - image: memcached:1.5
+      - image: redis:5
+      - image: percona:5.7
+    working_directory: ~/repo
+
+jobs:
+  build-app:
+    executor: php73
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "composer.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run: composer install -n --prefer-dist
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+      - run: vendor/bin/phpunit
+
+workflows:
+  version: 2
+  build-master:
+    jobs:
+      - build-app:
+          filters:
+            branches:
+              only: master
+  build-tags:
+    jobs:
+      - build-app:
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
