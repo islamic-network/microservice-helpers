@@ -1,5 +1,11 @@
 # Islamic Network MicroSevice Helpers
 [![CircleCI](https://circleci.com/gh/islamic-network/microservice-helpers.svg?style=shield)](https://circleci.com/gh/islamic-network/microservice-helpers)
+[![Latest Stable Version](https://poser.pugx.org/islamic-network/microservice-helpers/v/stable)](https://packagist.org/packages/islamic-network/microservice-helpers)
+[![Total Downloads](https://poser.pugx.org/islamic-network/microservice-helpers/downloads)](https://packagist.org/packages/islamic-network/microservice-helpers)
+[![License](https://poser.pugx.org/islamic-network/microservice-helpers/license)](https://packagist.org/packages/islamic-network/microservice-helpers)
+[![Monthly Downloads](https://poser.pugx.org/islamic-network/microservice-helpers/d/monthly)](https://packagist.org/packages/islamic-network/microservice-helpers)
+[![Daily Downloads](https://poser.pugx.org/islamic-network/microservice-helpers/d/daily)](https://packagist.org/packages/islamic-network/microservice-helpers)
+[![composer.lock](https://poser.pugx.org/islamic-network/microservice-helpers/composerlock)](https://packagist.org/packages/islamic-network/microservice-helpers)
 
 This is a group of various PHP helpers that have been extrapolated from the AlAdhan and AlQuran APIs.
 
