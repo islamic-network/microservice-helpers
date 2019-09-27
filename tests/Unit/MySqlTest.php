@@ -10,7 +10,7 @@ class MysqlTest extends TestCase
 {
     public function testWorkingServerStatus()
     {
-        $monitor = new MySql('127.0.0.1', 3306, 'circleci', 'circleci', 'circleci', 'SELECT TIMESTAMP(\'2009-05-18\')');
+        $monitor = new MySql('127.0.0.1', 3306, 'circleci', 'circleci', 'circleci', 'SELECT TIMESTAMP(\'2009-07-18\')');
         $this->assertTrue($monitor->status);
     }
 
