@@ -2,7 +2,7 @@ version: 2.1
 executors:
   php73:
     docker:
-      - image: vesica/php73
+      - image: vesica/php73:dev
       - image: memcached:1.5
       - image: redis:5
       - image: percona:5.7
