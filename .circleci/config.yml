@@ -18,6 +18,7 @@ jobs:
     executor: php73
     steps:
       - checkout
+      - run: composer install -n --prefer-dist
       - run: vendor/bin/phpunit --debug
 
 workflows:
