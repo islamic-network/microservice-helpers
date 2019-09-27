@@ -16,7 +16,7 @@ class RedisTest extends TestCase
 
     public function testUnknownServerStatus()
     {
-        $monitor = new Redis('123.456.789.10', 6379);
+        $monitor = new Redis('0.0.0.0', 6380);
         $this->assertFalse($monitor->status);
     }
 
