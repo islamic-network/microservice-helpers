@@ -10,7 +10,7 @@ class RedisTest extends TestCase
 {
     public function testWorkingServerStatus()
     {
-        $monitor = new Redis('127.0.0.1', 6379);
+        $monitor = new Redis('0.0.0.0', 6379);
         $this->assertTrue($monitor->status);
     }
 
