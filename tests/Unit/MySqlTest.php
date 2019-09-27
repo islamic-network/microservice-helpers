@@ -11,6 +11,7 @@ class MysqlTest extends TestCase
     public function testWorkingServerStatus()
     {
         $monitor = new MySql('0.0.0.0', 3306, 'circleci', 'circleci', 'circleci', 'SELECT TIMESTAMP(\'2009-05-18\')');
+        var_dump($monitor->status);
         $this->assertTrue($monitor->status);
     }
 
