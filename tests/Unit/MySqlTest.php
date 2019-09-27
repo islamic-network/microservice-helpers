@@ -10,13 +10,13 @@ class MysqlTest extends TestCase
 {
     public function testWorkingServerStatus()
     {
-        $monitor = new MySql('0.0.0.0', 3306, 'circleci', 'circleci', 'circleci', 'SELECT 1 FROM circleci LIMIT 1');
+        $monitor = new MySql('0.0.0.0', 3306, 'circleci', 'circleci', 'circleci', 'SELECT TIMESTAMP(\'2009-05-18\')');
         $this->assertTrue($monitor->status);
     }
 
     public function testUnknownServerStatus()
     {
-        $monitor = new MySql('0.0.0.0', 3315, 'circleci', 'circleci', 'circleci', 'SELECT 1 FROM circleci LIMIT 1');
+        $monitor = new MySql('0.0.0.0', 3315, 'circleci', 'circleci', 'circleci', 'SELECT TIMESTAMP(\'2009-05-18\')');
         $this->assertFalse($monitor->status);
     }
 
