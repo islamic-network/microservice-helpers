@@ -17,8 +17,13 @@ They can be used on any projects that use PHP 7.1+.
   * Memcached
   * Redis
   * MySQL
-  
-# How to Use to Build a Healthcheck page, for instance
+
+## Installation
+```
+composer require islamic-network/microservice-helpers
+```
+
+## How to Use to Build a Healthcheck page, for instance
 
 ```php
 use IslamicNetwork\MicroServiceHelpers\Monitors\Memcached;
