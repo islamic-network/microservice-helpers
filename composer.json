@@ -2,12 +2,6 @@
   "name": "islamic-network/microservice-helpers",
   "type": "library",
   "description": "PHP Package to make microservices consistent",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/islamic-network/microservice-helpers"
-    }
-  ],
   "require": {
     "monolog/monolog": "^2.0",
     "symfony/yaml": "^4.3",
