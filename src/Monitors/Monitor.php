@@ -1,10 +1,9 @@
 <?php
-
-
 namespace IslamicNetwork\MicroServiceHelpers\Monitors;
 
 /**
  * Class Monitor
+ *
  * @package IslamicNetwork\MicroServiceHelpers\Monitors
  */
 class Monitor

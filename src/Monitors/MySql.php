@@ -1,6 +1,4 @@
 <?php
-
-
 namespace IslamicNetwork\MicroServiceHelpers\Monitors;
 
 use Doctrine\DBAL\Configuration;

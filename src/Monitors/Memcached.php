@@ -1,6 +1,4 @@
 <?php
-
-
 namespace IslamicNetwork\MicroServiceHelpers\Monitors;
 use Vesica\Cacher\Memcached as Cache;
 use Exception;

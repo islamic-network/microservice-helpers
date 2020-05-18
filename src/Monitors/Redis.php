@@ -1,7 +1,6 @@
 <?php
-
-
 namespace IslamicNetwork\MicroServiceHelpers\Monitors;
+
 use Vesica\Cacher\Redis as Cache;
 use Exception;
 
